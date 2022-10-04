@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Country" representedClassName="Country" syncable="YES">
+        <attribute name="country" attributeType="String"/>
+    </entity>
+    <entity name="DetailFilm" representedClassName="DetailFilm" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="filmId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="filmLength" optional="YES" attributeType="String"/>
+        <attribute name="nameEn" optional="YES" attributeType="String"/>
+        <attribute name="nameRu" attributeType="String"/>
+        <attribute name="posterUrl" optional="YES" attributeType="String"/>
+        <attribute name="slogan" optional="YES" attributeType="String"/>
+        <attribute name="webUrl" optional="YES" attributeType="String"/>
+        <attribute name="year" attributeType="String"/>
+        <relationship name="countries" toMany="YES" deletionRule="Cascade" destinationEntity="Country"/>
+        <relationship name="genres" toMany="YES" deletionRule="Cascade" destinationEntity="Genre"/>
+    </entity>
+    <entity name="Film" representedClassName="Film" syncable="YES">
+        <attribute name="filmId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="filmLength" optional="YES" attributeType="String"/>
+        <attribute name="nameEn" optional="YES" attributeType="String"/>
+        <attribute name="nameRu" attributeType="String"/>
+        <attribute name="posterUrl" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="String"/>
+        <attribute name="ratingVoteCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="year" attributeType="String"/>
+        <relationship name="countries" toMany="YES" deletionRule="Cascade" destinationEntity="Country"/>
+        <relationship name="genres" toMany="YES" deletionRule="Cascade" destinationEntity="Genre"/>
+    </entity>
+    <entity name="Genre" representedClassName="Genre" syncable="YES">
+        <attribute name="genre" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Country" positionX="-106.95703125" positionY="82.7265625" width="128" height="44"/>
+        <element name="Film" positionX="-282.453125" positionY="12.84765625" width="128" height="179"/>
+        <element name="Genre" positionX="-104.96484375" positionY="-78.6171875" width="128" height="44"/>
+        <element name="DetailFilm" positionX="-189" positionY="72" width="128" height="194"/>
+    </elements>
+</model>
